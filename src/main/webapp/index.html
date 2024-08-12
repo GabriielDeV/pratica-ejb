@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aplicativo Exemplo de Uso de EJB</title>
+</head>
+<body>
+    <h1>Aplicativo Exemplo de Uso de EJB</h1>
+    <p>
+        Obs.: tentar inserir um usuário com id=3 lançará uma exceção de "Menor de idade inválido". <br>
+        Inserir com id=4 fará com que o nome seja alterado, após a inserção, para "nome" + "alterado". <br>
+        Lembre-se que a cada reinício do servidor, os dados serão apagados.
+    </p>
+    <br>
+
+    <!-- Formulário para Inserir Usuário -->
+    <h2>Inserir Usuário</h2>
+    <form action="usuario.do" method="GET">
+        <label for="idUsuario">Id:</label> 
+        <input id="idUsuario" name="id"><br>
+        <label for="nomeUsuario">Nome:</label>
+        <input id="nomeUsuario" name="nome">
+        <input type="hidden" name="oper" value="1" />
+        <button type="submit">Inserir Usuário</button>
+    </form>
+    <br>
+
+    <!-- Formulário para Listar Usuários -->
+    <form action="usuario.do" method="GET">
+        <input type="hidden" name="oper" value="2" />
+        <button type="submit">Listar Usuários</button>
+    </form>
+
+    <br><br>
+
+    <!-- Formulário para Inserir Mensagem -->
+    <h2>Inserir Mensagem</h2>
+    <form action="mensagem.do" method="GET">
+        <label for="idMensagem">Id:</label> 
+        <input id="idMensagem" name="id"><br>
+        <label for="conteudoMensagem">Conteúdo:</label>
+        <input id="conteudoMensagem" name="conteudo">
+        <input type="hidden" name="oper" value="1" />
+        <button type="submit">Inserir Mensagem</button>
+    </form>
+    <br>
+
+    <!-- Formulário para Listar Mensagens -->
+    <form action="mensagem.do" method="GET">
+        <input type="hidden" name="oper" value="2" />
+        <button type="submit">Listar Mensagens</button>
+    </form>
+
+</body>
+</html>
